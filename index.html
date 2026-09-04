@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stitching Boutique</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            Stitching Boutique
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <button onclick="openLogin()">Login</button>
+
+            <button onclick="openCart()">🛒 Cart</button>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p>HANDMADE • UNIQUE • ELEGANT</p>
+
+            <h1>
+                Beautiful Clothes,
+                <br>
+                Stitched With Love.
+            </h1>
+
+            <p>
+                Explore our collection of beautifully stitched outfits.
+            </p>
+
+            <button class="shop-btn" onclick="showCollection()">
+                Explore Collection
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+    <section id="collection" class="collection">
+
+        <h2>Rukhsar's Stitching Collection</h2>
+
+        <p>
+            Hand-stitched designs made with love.
+        </p>
+
+
+        <div class="products">
+
+
+            <!-- KURTI -->
+            <div class="product">
+
+                <div class="product-img">
+                    <img
+                        src="images/kurti.jpg"
+                        alt="Elegant Kurti">
+                </div>
+
+                <h3>Elegant Kurti</h3>
+
+                <p>
+                    Beautiful handmade stitching
+                </p>
+
+                <button onclick="openOrder('Elegant Kurti')">
+                    Order Now
+                </button>
+
+            </div>
+
+
+            <!-- SUIT -->
+            <div class="product">
+
+                <div class="product-img">
+                    <img
+                        src="images/designer.jpg"
+                        alt="Designer Suit">
+                </div>
+
+                <h3>Designer Suit</h3>
+
+                <p>
+                    Custom stitched suit
+                </p>
+
+                <button onclick="openOrder('Designer Suit')">
+                    Order Now
+                </button>
+
+            </div>
+
+
+            <!-- SAREE -->
+            <div class="product">
+
+                <div class="product-img">
+                    <img
+                        src="images/saree.jpg"
+                        alt="Designer Saree">
+                </div>
+
+                <h3>Designer Saree</h3>
+
+                <p>
+                    Beautifully stitched saree
+                </p>
+
+                <button onclick="openOrder('Designer Saree')">
+                    Order Now
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2>
+            About Our Boutique
+        </h2>
+
+        <p>
+            Every outfit is carefully stitched with creativity,
+            attention to detail and love.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            For custom orders and enquiries, contact us.
+        </p>
+
+        <button onclick="openOrder('Custom Stitching')">
+            Place Custom Order
+        </button>
+
+    </section>
+
+
+    <!-- LOGIN POPUP -->
+    <div id="loginPopup" class="popup">
+
+        <div class="popup-box">
+
+            <span
+                class="close"
+                onclick="closeLogin()">
+                ×
+            </span>
+
+            <h2>
+                Welcome Back 💕
+            </h2>
+
+            <input
+                type="email"
+                placeholder="Email">
+
+            <input
+                type="password"
+                placeholder="Password">
+
+            <button>
+                Login
+            </button>
+
+            <p>
+                New customer?
+                <b>Create Account</b>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ORDER POPUP -->
+    <div id="orderPopup" class="popup">
+
+        <div class="popup-box">
+
+            <span
+                class="close"
+                onclick="closeOrder()">
+                ×
+            </span>
+
+            <h2>
+                Place Your Order
+            </h2>
+
+            <p id="selectedProduct"></p>
+
+            <input
+                type="text"
+                placeholder="Your Name">
+
+            <input
+                type="tel"
+                placeholder="Phone Number">
+
+            <input
+                type="text"
+                placeholder="Size">
+
+            <textarea
+                placeholder="Address">
+            </textarea>
+
+            <button onclick="confirmOrder()">
+                Confirm Order
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Stitching Boutique | Made With ❤️
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
